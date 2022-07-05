@@ -1,3 +1,5 @@
+import { buildPage } from "./buildPage.js"
+
 const pageContent = document.getElementById('root')
 
 const pageTitle = async () => {
@@ -5,10 +7,10 @@ const pageTitle = async () => {
 	.then(response => {
 		return response.text()
 	})
-	const html = String(res)
-	return html
+	return String(res)
 }
 
 const app = (async () => {
 	pageContent!.innerHTML = (await pageTitle()).valueOf()
+	buildPage()
 })()

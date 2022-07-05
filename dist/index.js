@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,15 +7,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import { buildPage } from "./buildPage.js";
 const pageContent = document.getElementById('root');
 const pageTitle = () => __awaiter(void 0, void 0, void 0, function* () {
     const res = yield fetch('../src/components/title.html')
         .then(response => {
         return response.text();
     });
-    const html = String(res);
-    return html;
+    return String(res);
 });
 const app = (() => __awaiter(void 0, void 0, void 0, function* () {
     pageContent.innerHTML = (yield pageTitle()).valueOf();
+    buildPage();
 }))();
