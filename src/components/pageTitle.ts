@@ -1,6 +1,6 @@
 // typing
 interface PageTitleProps {
-	(title?: string | undefined): HTMLDivElement
+	(title?: string): HTMLDivElement
 }
 
 // main container
