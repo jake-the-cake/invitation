@@ -1,16 +1,11 @@
-import { buildPage } from "./buildPage.js"
+// import { buildPage } from "./buildPage.js"
+import { displayPageTitle } from "./components/pageTitle.js"
 
 const pageContent = document.getElementById('root')
 
-const pageTitle = async () => {
-	const	res = await fetch('../src/components/title.html')
-	.then(response => {
-		return response.text()
-	})
-	return String(res)
-}
-
-const app = (async () => {
-	pageContent!.innerHTML = (await pageTitle()).valueOf()
-	buildPage()
+const app = (() => {
+console.log('version 0.1.0')
+const title = displayPageTitle()
+pageContent!.innerHTML = ''
+pageContent!.appendChild(title)
 })()

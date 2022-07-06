@@ -1,17 +1,15 @@
 {
   "name": "invitation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Jake Thompson",
   "description": "evite system with typescript",
   "type": "module",
   "main": "dist/index.html",
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
     "typescript": "^4.7.4"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
